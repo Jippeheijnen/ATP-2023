@@ -6,6 +6,11 @@ from ctypes import cdll
 
 
 def log_method_calls(f):
+    '''
+    Deze decorator is vrij vanzelfsprekend, een simpele log functie.
+    :param f:
+    :return:
+    '''
     def wrapper(*args, **kw):
         t = datetime.now()
         printstr = f"{t.hour}:{t.minute}:{t.second} : " + \
